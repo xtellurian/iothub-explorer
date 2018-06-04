@@ -1,5 +1,7 @@
 # IoT Hub Explorer - CLI Container
 
+A docker image (and docker-compose) for using the [Azure IoT Hub Explorer](https://github.com/Azure/iothub-explorer) tool.
+
 ```
 docker run -it flanagan89/iothub-explorer:latest /bin/bash
 ```
@@ -23,14 +25,14 @@ services:
 
 `iox` is an alias for `iothub-explorer`
 
-* Login to IoT Hub
+Login to IoT Hub
 
 ```
-iox login "HostName=<my-hub>.azure-devices.net;SharedAccessKeyName=<my-policy>;SharedAccessKey=<my-policy-key>"
+bash-4.3# iox login "HostName=<my-hub>.azure-devices.net;SharedAccessKeyName=<my-policy>;SharedAccessKey=<my-policy-key>"
 ```
 
 Monitor all events
 
 ```
-iox monitor-events --login "HostName=<my-hub>.azure-devices.net;SharedAccessKeyName=<my-policy>;SharedAccessKey=<my-policy-key>"
+bash-4.3# iox monitor-events --login "HostName=<my-hub>.azure-devices.net;SharedAccessKeyName=<my-policy>;SharedAccessKey=<my-policy-key>"
 ```
