@@ -1,0 +1,7 @@
+version:  '3'
+services:
+  iot-ex:
+      image: iothubtest
+      stdin_open: true
+      tty: true
+      container_name: flanagan89/iothub-explorer:v1
